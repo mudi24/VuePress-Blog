@@ -19,7 +19,11 @@ module.exports = {
     },{
       title: 'Node.js',
       children: [
-        '/tech/Node.js入门'
+        '/tech/Node.js入门',
+        '/tech/FileSystem',
+        '/tech/Jest测试',
+        '/tech/HTTP模块',
+        '/tech/编写命令行翻译'
       ]
     }]
   }
