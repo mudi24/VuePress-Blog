@@ -23,7 +23,7 @@ module.exports = {
         '/tech/FileSystem',
         '/tech/Jest测试',
         '/tech/HTTP模块',
-        '/tech/编写命令行翻译'
+        '/tech/commander-translation'
       ]
     }]
   }
