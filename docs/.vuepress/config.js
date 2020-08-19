@@ -16,6 +16,12 @@ module.exports = {
       children: [
         '/components/构建VuePress'
       ]
+    },
+    {
+      title: 'Bootstrap',
+      children: [
+        '/tech/Bootstrap快速入门',
+      ]
     },{
       title: 'Node.js',
       children: [
