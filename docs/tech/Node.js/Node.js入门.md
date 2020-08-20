@@ -82,7 +82,7 @@ loop 循环，Node.js 按顺序轮询每种事件
 
 方方翻译的 event loop 文档：https://juejin.im/post/5ab7677f6fb9a028d56711d0
 
-![EventLoop顺序](./../.vuepress/public/EventLoop顺序.jpg)
+![EventLoop顺序](../../.vuepress/public/EventLoop.jpg)
 
 重点阶段
 

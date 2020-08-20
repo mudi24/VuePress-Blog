@@ -20,16 +20,16 @@ module.exports = {
     {
       title: 'Bootstrap',
       children: [
-        '/tech/Bootstrap快速入门',
+        '/tech/Bootstrap/Bootstrap快速上手',
       ]
     },{
       title: 'Node.js',
       children: [
-        '/tech/Node.js入门',
-        '/tech/FileSystem',
-        '/tech/Jest测试',
-        '/tech/HTTP模块',
-        '/tech/commander-translation'
+        '/tech/Node.js/Node.js入门',
+        '/tech/Node.js/FileSystem',
+        '/tech/Node.js/Jest测试',
+        '/tech/Node.js/HTTP模块',
+        '/tech/Node.js/commander-translation'
       ]
     }]
   }
