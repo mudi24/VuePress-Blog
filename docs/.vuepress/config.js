@@ -18,6 +18,12 @@ module.exports = {
       ]
     },
     {
+      title: 'Sass',
+      children: [
+        '/tech/Sass/Sass快速上手',
+      ]
+    },
+    {
       title: 'Bootstrap',
       children: [
         '/tech/Bootstrap/Bootstrap快速上手',
