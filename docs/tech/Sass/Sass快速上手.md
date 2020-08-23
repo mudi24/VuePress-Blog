@@ -9,19 +9,21 @@ sidebarDepth: 2
 
 ### 1. sass 可以使用变量
 
-    ```css
-    $blue: #1875e7;
-    　 div {
-      color: $blue;
-    }
-    ```
-    如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。
-    ```scss
-    $side: left;
-    div {
-      border-#{$side}-radius: 5px;
-    }
-    ```
+```scss
+$blue: #1875e7;
+div {
+  color: $blue;
+}
+```
+
+如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。
+
+```scss
+$side: left;
+div {
+  border-#{$side}-radius: 5px;
+}
+```
 
 ### 2. sass 可以使用算式
 
@@ -56,7 +58,7 @@ p {
 
 可以使用&引用父元素，如：a:hover 伪类可以写成下面这样
 
-```css
+```scss
 a {
   &:hover {
     color: #ffb3ff;
@@ -66,12 +68,15 @@ a {
 
 ### 4. sass 注释
 
-• 标准的 CSS 注释 / comment / ，会保留到编译后的文件。
-• 单行注释 // comment，只保留在 SASS 源文件中，编译后被省略。
-• 在/_后面加一个感叹号，表示这是"重要注释"。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。
-/_!
+- 标准的 CSS 注释 / comment / ，会保留到编译后的文件。
+- 单行注释 // comment，只保留在 SASS 源文件中，编译后被省略。
+- 在/\*后面加一个感叹号，表示这是"重要注释"。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。
+
+```scss
+/*!
 　重要注释！
-\*/
+*/
+```
 
 ### 5. sass 代码复用
 
@@ -152,42 +157,63 @@ complement(#cc3) // #33c
 
 ### 条件语句（if else)
 
+```scss
 p {
-　　　　@if 1 + 1 == 2 { border: 1px solid; }
-　　　　@if 5 < 3 { border: 2px dotted; }
-　　}
-　　@if lightness(\$color) > 30% {
-　　　　 background-color: #000;
-　　} @else {
-　　　　 background-color: #fff;
-　　}
+  　　@if 1 + 1 == 2 {
+    border: 1px solid;
+  }
+  　　@if 5 < 3 {
+    border: 2px dotted;
+  }
+}
+@if lightness(\$color) > 30% {
+  　　background-color: #000;
+} @else {
+  　　background-color: #fff;
+}
+```
 
 ### 循环语句（for while each)
 
 for 循环
-　　@for $i from 1 to 10 {
-   　　　　.border-#{$i} {
-　　　　　　 border: #{$i}px solid blue;
-   　　　　}
-   　　}
-   while 循环
-   　　$i: 6;
-　　@while $i > 0 {
-   　　　　.item-#{$i} { width: 2em \* $i; }
-   　　　　$i: $i - 2;
-   　　}
-   each 循环，与 for 循环类似
-   　　@each $member in a, b, c, d {
-　　　　.#{$member} {
-   　　　　　　 background-image: url("/image/#{$member}.jpg");
-　　　　}
+
+```scss
+@for $i from 1 to 10 {
+　　.border-#{$i} {
+　　　 border: #{$i}px solid blue;
 　　}
+}
+```
+
+while 循环
+
+```scss
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} {
+    width: 2em \* $i;
+  }
+  $i: $i - 2;
+}
+```
+
+each 循环，与 for 循环类似
+
+```scss
+@each $member in a, b, c, d {
+　.#{$member} {
+　　background-image: url("/image/#{\$member}.jpg");
+　}
+}
+```
 
 ### 自定义函数
 
+```scss
 @function double($n) {
-   　　　　@return \$n \* 2;
-　　}
-　　#sidebar {
-　　　　 width: double(5px);
-　　}
+ 　@return \$n \* 2;
+}
+#sidebar {
+　 width: double(5px);
+}
+```
