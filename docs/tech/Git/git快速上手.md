@@ -1,0 +1,103 @@
+---
+title: "git快速上手"
+sidebarDepth: 2
+---
+
+# 版本控制工具 -- git
+
+## git clone 克隆
+
+- git clone <版本库的网址>
+- git clone <版本库的网址> <本地目录名>
+- git clone 支持多种协议，除了 HTTP(s)以外，还支持 SSH、Git、本地文件协议等
+  ```
+  git clone http[s]://example.com/path/to/repo.git/
+  git clone ssh://example.com/path/to/repo.git/
+  git clone git://example.com/path/to/repo.git/
+  git clone /opt/git/project.git
+  git clone file:///opt/git/project.git
+  git clone ftp[s]://example.com/path/to/repo.git/
+  git clone rsync://example.com/path/to/repo.git/
+  ```
+  通常来说，Git 协议下载速度最快，SSH 协议用于需要用户认证的场合。
+
+## git remote 管理主机名
+
+- git remote 不带选项的时候，git remote 命令列出所有远程主机。
+- git remote -v 查看远程主机的网址
+- git remote -o 克隆版本库的时候，所使用的远程主机自动被 Git 命名为 origin。如果想用其他的主机名，需要用 git clone 命令的-o 选项指定。
+  ```
+  git clone -o jQuery https://github.com/jquery/jquery.git
+  git remote
+  jQuery
+  ```
+- git remote show <主机名> 查看该主机的详细信息。
+- git remote add <主机名> <网址> 添加远程主机
+- git remote rm <主机名> 删除远程主机
+- git remote rename <原主机名> <新主机名> 远程主机的改名
+
+## git fetch
+
+- git fetch 通常用来查看其他人的进程，因为它取回的代码对你本地的开发代码没有影响。
+- git fetch <远程主机名> 将某个远程主机的更新，全部取回本地
+
+* git fetch <远程主机名> <分支名> 只取回特定分支的更新，所取回的更新，在本地主机上要用"远程主机名/分支名"的形式读取。比如 origin 主机的 master，就要用 origin/master 读取。
+* git branch 命令的-r 选项，可以用来查看远程分支，-a 选项查看所有分支。
+
+```
+git branch -r
+  origin/master
+git branch -a
+* master
+  origin/master
+```
+
+## git pull
+
+- git pull 拉取远程主机某个分支的更新，再与本地的指定分支合并
+- git pull <远程主机名> <远程分支名>:<本地分支名> 完整命令格式
+
+```
+git pull origin master:deveolp // 拉去远程master分支，合并到本地develop分支
+```
+
+- git pull <远程主机名> <远程分支名> 如果远程分支是与当前分支合并，则冒号后面的部分可以省略。
+
+```
+// 上面这个命令等同于：先把远程主机对应的分支代码拉取到本地，再和本地当前分支合并
+git fetch
+git merge
+```
+
+- 在 git clone 的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的 master 分支自动"追踪"origin/master 分支。
+- git branch --set-upstream develop origin/master 指定 develop 分支追踪远程的 master 分支
+- git pull origin 如果当前分支与远程分支存在追踪关系，git pull 就可以省略远程分支名。
+- git pull 如果当前分支只有一个追踪分支，连远程主机名都可以省略。
+- git pull -p 本地删除远程已经删除的分支。（如果远程主机删除了某个分支，默认情况下，git pull 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致 git pull 不知不觉删除了本地分支。）
+
+```
+// 等同于下面的命令
+git fetch --prune origin
+git fetch -p
+```
+
+## git push
+
+- git push 将本地分支的更新，推送到远程主机
+- git push <远程主机名> <本地分支名>:<远程分支名> 完整命令格式
+- git push origin master 如果省略远程分支名，则表示将本地分支推送与之存在"追踪关系"的远程分支（通常两者同名），如果该远程分支不存在，则会被新建。
+- git push origin :master === git push origin --delete master 如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。
+- git push origin 如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。
+- git push 如果当前分支只有一个追踪分支，那么主机名都可以省略。
+- git push -u origin master 如果当前分支与多个主机存在追踪关系，则可以使用-u 选项指定一个默认主机，这样后面就可以不加任何参数使用 git push。
+- 不带任何参数的 git push，默认只推送当前分支，这叫做 simple 方式。此外，还有一种 matching 方式，会推送所有有对应的远程分支的本地分支。如果要修改这个设置，可以采用 git config 命令。
+
+```
+git config --global push.default matching
+ 或者
+git config --global push.default simple
+```
+
+- git push --all origin 不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机
+- git push --force origin 强行推送，会覆盖远程主机上的版本
+- git push --tags origin 可以推送标签（tags），默认不会推送标签

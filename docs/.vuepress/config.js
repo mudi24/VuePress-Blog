@@ -18,6 +18,12 @@ module.exports = {
       ]
     },
     {
+      title: '版本控制工具--git',
+      children: [
+        '/tech/Git/git快速上手'
+      ]
+    },
+    {
       title: 'Sass',
       children: [
         '/tech/Sass/Sass快速上手',
