@@ -18,9 +18,10 @@ module.exports = {
       ]
     },
     {
-      title: '版本控制工具--git',
+      title: 'git',
       children: [
-        '/tech/Git/git快速上手'
+        '/tech/Git/git快速上手',
+        '/tech/Git/git常用命令',
       ]
     },
     {
