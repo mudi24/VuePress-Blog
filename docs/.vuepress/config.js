@@ -18,6 +18,12 @@ module.exports = {
       ]
     },
     {
+      title: 'VS Code',
+      children: [
+        '/tech/VS Code/VS Code常用快捷键'
+      ]
+    },
+    {
       title: 'git',
       children: [
         '/tech/Git/git快速上手',
