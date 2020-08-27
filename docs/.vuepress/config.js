@@ -50,6 +50,13 @@ module.exports = {
         '/tech/Node.js/HTTP模块',
         '/tech/Node.js/commander-translation'
       ]
-    }]
+    },
+    {
+      title: '算法',
+      children: [
+        '/tech/算法/排序算法',
+      ]
+    }
+  ]
   }
 }
