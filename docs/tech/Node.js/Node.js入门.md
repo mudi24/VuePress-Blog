@@ -27,7 +27,7 @@ sidebarDepth: 2
 
 ## Node.js 技术架构
 
-![alt](/Node.js技术架构.jpg)
+![Node.js架构](../../.vuepress/public/Node.js架构.jpg)
 
 如果要看源代码，推荐看 0.10 版本（使用时间久，代码相对较少）
 了解更多，请查看[node](https://github.com/yjhjstz/deep-into-node)

@@ -1,5 +1,5 @@
 ---
-title: 构建 VuePress
+title: 构建 React+Ts
 sidebarDepth: 2
 ---
 

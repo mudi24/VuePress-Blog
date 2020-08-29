@@ -14,7 +14,8 @@ module.exports = {
     sidebar: [{
       title: '构建',
       children: [
-        '/components/构建VuePress'
+        '/tech/构建/构建VuePress',
+        '/tech/构建/构建React+Ts'
       ]
     },
     {
@@ -41,7 +42,14 @@ module.exports = {
       children: [
         '/tech/Bootstrap/Bootstrap快速上手',
       ]
-    },{
+    },
+    {
+      title: 'DOM',
+      children: [
+        '/tech/DOM/常见事件与DOM事件模型',
+      ]
+    }
+    ,{
       title: 'Node.js',
       children: [
         '/tech/Node.js/Node.js入门',
@@ -55,6 +63,12 @@ module.exports = {
       title: '算法',
       children: [
         '/tech/算法/排序算法',
+      ]
+    },
+    {
+      title: '开源',
+      children: [
+        '/tech/开源/开源许可证',
       ]
     }
   ]
