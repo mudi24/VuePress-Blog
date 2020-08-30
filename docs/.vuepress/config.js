@@ -32,6 +32,13 @@ module.exports = {
       ]
     },
     {
+      title: 'Webpack',
+      children: [
+        '/tech/Webpack/Webpack快速入门',
+        '/tech/Webpack/Webpack进阶',
+      ]
+    },
+    {
       title: 'Sass',
       children: [
         '/tech/Sass/Sass快速上手',
