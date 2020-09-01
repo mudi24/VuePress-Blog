@@ -34,7 +34,7 @@ module.exports = {
     {
       title: 'Webpack',
       children: [
-        '/tech/Webpack/Webpack快速入门',
+        '/tech/Webpack/Webpack配置（基础篇）',
         '/tech/Webpack/Webpack进阶',
       ]
     },
@@ -64,6 +64,12 @@ module.exports = {
         '/tech/Node.js/Jest测试',
         '/tech/Node.js/HTTP模块',
         '/tech/Node.js/commander-translation'
+      ]
+    },
+    {
+      title: 'Docker',
+      children: [
+        '/tech/Node.js/Docker'
       ]
     },
     {
