@@ -74,3 +74,19 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql:5.7.
   - `use sys;`使用默认的 sys 数据库
   - `show tables;`查看所有表
   - `select * from CHARACTER_SETS;`查看表内容
+
+### Docker Desktop Installer 安装 Docker 失败
+
+- 错误信息：Docker Desktop requires Windows 10 Pro/Enterprise (15063+) or Windows 10 Home (19018+).
+
+![安装Docker失败](../../.vuepress/public/Install-Docker-Failed.jpg)
+
+- 错误原因：Docker Desktop 使用需要 Windows 10 Pro 或 Enterprise，而我使用的 windows 10 家庭版，至少需要专业版才可以直接支持 Docker Desktop
+- 解决方案：https://www.sitepoint.com/docker-windows-10-home/
+
+### 如何在 Windows 家庭版安装 Docker
+
+- 安装 Git Bash
+- 安装 Chocolatey，这是 Windows 的软件包管理器。这将使安装其余程序的工作更加容易。
+- 安装 VirtualBox 及其扩展名。另外，如果您已完成 Chocolatey 的安装，则只需在提升的 PowerShell 终端中执行以下命令`choco install virtualbox`
+-
