@@ -89,4 +89,7 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql:5.7.
 - 安装 Git Bash
 - 安装 Chocolatey，这是 Windows 的软件包管理器。这将使安装其余程序的工作更加容易。
 - 安装 VirtualBox 及其扩展名。另外，如果您已完成 Chocolatey 的安装，则只需在提升的 PowerShell 终端中执行以下命令`choco install virtualbox`
--
+- 安装 Docker Machine，在 PowerShell 执行如下命令`choco install docker-machine`
+- 在 Git Bash 终端上，使用 Docker Machine 安装 Docker Engine。这将下载包含 Docker Engine 的 Linux 映像，并使用 VirtualBox 将其作为 VM 运行。`docker-machine create --driver virtualbox默认`
+
+### Docker
