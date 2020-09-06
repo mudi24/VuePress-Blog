@@ -27,6 +27,7 @@ module.exports = {
     {
       title: 'git',
       children: [
+        '/tech/Git/git',
         '/tech/Git/git快速上手',
         '/tech/Git/git常用命令',
       ]
