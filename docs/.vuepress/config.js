@@ -25,6 +25,12 @@ module.exports = {
       ]
     },
     {
+      title: 'Chrome',
+      children: [
+        '/tech/Chrome/chrome快捷键'
+      ]
+    },
+    {
       title: 'git',
       children: [
         '/tech/Git/git',
