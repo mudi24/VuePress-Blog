@@ -39,6 +39,13 @@ module.exports = {
       ]
     },
     {
+      title: 'CSS',
+      children: [
+        '/tech/CSS/响应式布局',
+        '/tech/CSS/css动画',
+      ]
+    },
+    {
       title: 'Webpack',
       children: [
         '/tech/Webpack/Webpack配置（基础篇）',
