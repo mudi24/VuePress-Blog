@@ -25,9 +25,10 @@ module.exports = {
       ]
     },
     {
-      title: 'Chrome',
+      title: '浏览器',
       children: [
-        '/tech/Chrome/chrome快捷键'
+        '/tech/浏览器/浏览器渲染原理',
+        '/tech/浏览器/chrome快捷键'
       ]
     },
     {
@@ -41,6 +42,7 @@ module.exports = {
     {
       title: 'CSS',
       children: [
+        '/tech/CSS/CSS选择器',
         '/tech/CSS/响应式布局',
         '/tech/CSS/css动画',
       ]
@@ -68,6 +70,7 @@ module.exports = {
       title: 'DOM',
       children: [
         '/tech/DOM/常见事件与DOM事件模型',
+        '/tech/DOM/DOM diff算法',
       ]
     }
     ,{
