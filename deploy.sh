@@ -18,7 +18,7 @@
 
       # 如果发布到 https://<USERNAME>.github.io
 
-      git push -f git@gitee.com:Herhee/herhee.gitee.io.git master
+      git push -f git@gitee.com:Herhee/blog.git master
 
       # 如果发布到 https://<USERNAME>.github.io/<REPO>
 

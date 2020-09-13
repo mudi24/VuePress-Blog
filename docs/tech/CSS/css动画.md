@@ -120,3 +120,8 @@ sidebarDepth: 2
     100% { top: 100px; left: 100%;}
   }
   ```
+
+## css 动画优化
+
+- JS 优化：使用 requestAnimationFrame 代替 setTimeout 或 setInterval
+- CSS 优化：使用 will-change 或 translate

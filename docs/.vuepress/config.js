@@ -1,5 +1,6 @@
 module.exports = {
   title: '知识宝库',
+  base: '/blog/',
   head: [ // 注入到当前页面 <head> 中的标签
     ['link',{rel:'icon',href:''}] //增加一个自定义的 favicon(网页标签的图标)
   ],
@@ -15,7 +16,7 @@ module.exports = {
       title: '构建',
       children: [
         '/tech/构建/构建VuePress',
-        '/tech/构建/构建React+Ts'
+        '/tech/构建/构建React+TS'
       ]
     },
     {
@@ -42,9 +43,15 @@ module.exports = {
     {
       title: 'CSS',
       children: [
-        '/tech/CSS/CSS选择器',
+        '/tech/CSS/css选择器',
         '/tech/CSS/响应式布局',
         '/tech/CSS/css动画',
+      ]
+    },
+    {
+      title: 'React',
+      children: [
+        '/tech/React/函数式编程',
       ]
     },
     {

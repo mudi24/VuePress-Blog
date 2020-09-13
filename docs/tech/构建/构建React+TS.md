@@ -1,5 +1,5 @@
 ---
-title: 构建 React+Ts
+title: 构建 React+TS
 sidebarDepth: 2
 ---
 
@@ -29,5 +29,3 @@ git rm -r --cached .idea
 ```
 
 ## 目录说明
-
-[img]
