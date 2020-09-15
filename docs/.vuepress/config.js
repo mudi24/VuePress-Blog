@@ -49,6 +49,12 @@ module.exports = {
       ]
     },
     {
+      title: 'jQuery',
+      children:[
+        '/tech/jQuery/jquery设计模式'
+      ]
+    },
+    {
       title: 'React',
       children: [
         '/tech/React/函数式编程',
