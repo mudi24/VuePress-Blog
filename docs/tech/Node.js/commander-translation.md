@@ -1,5 +1,5 @@
 ---
-title: "Commander Translation"
+title: "commander-translation"
 sidebarDepth: 2
 ---
 
@@ -11,7 +11,7 @@ yarn add commander  // 自带ts类型声明
 yarn add --dev @types/node  // ts声明
 ```
 
-- 程序员潜规则：<a>必填，[b]可填可不填
+- 程序员潜规则：`<a>`必填，`[b]`可填可不填
 
 ## https.request
 

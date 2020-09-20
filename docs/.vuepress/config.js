@@ -41,22 +41,62 @@ module.exports = {
       ]
     },
     {
+      title: 'HTML',
+      children: [
+        '/tech/HTML/html标签',
+        '/tech/HTML/HTML入门笔记',
+      ]
+    },
+    {
       title: 'CSS',
       children: [
         '/tech/CSS/css选择器',
         '/tech/CSS/响应式布局',
         '/tech/CSS/css动画',
+        '/tech/CSS/定位与层叠上下文',
+        '/tech/CSS/flex布局',
+        '/tech/CSS/grid布局',
+      ]
+    },
+    {
+      title: 'JS',
+      children:[
+        '/tech/JS/JS的诞生',
+        '/tech/JS/JS基本语法',
+        '/tech/JS/数据类型',
+        '/tech/JS/JS继承',
+        '/tech/JS/JS对象基本用法',
+        '/tech/JS/JS函数的执行时机',
+        '/tech/JS/Promise和async、await',
+        '/tech/JS/垃圾回收',
       ]
     },
     {
       title: 'jQuery',
       children:[
+        '/tech/jQuery/jquery的设计思想',
         '/tech/jQuery/jquery设计模式'
+      ]
+    },
+    {
+      title: 'Vue',
+      children:[
+        '/tech/Vue/初识Vue',
+        '/tech/Vue/Vue数据响应式',
+        '/tech/Vue/Vue指令和修饰符',
+        '/tech/Vue/Vue进阶属性',
+        '/tech/Vue/Vue动画',
+        '/tech/Vue/computed和watch',
+        '/tech/Vue/TS结合Vue',
       ]
     },
     {
       title: 'React',
       children: [
+        '/tech/React/浅尝React',
+        '/tech/React/探索React Hooks原理',
+        '/tech/React/React Hooks的API',
+        '/tech/React/React组件',
         '/tech/React/函数式编程',
       ]
     },
@@ -71,6 +111,14 @@ module.exports = {
       title: 'Sass',
       children: [
         '/tech/Sass/Sass快速上手',
+        '/tech/Sass/Sass小记',
+      ]
+    },
+    {
+      title: 'TS',
+      children: [
+        '/tech/TS/5分钟学习TypeScript',
+        '/tech/TS/TS特性（接口）',
       ]
     },
     {
@@ -83,29 +131,64 @@ module.exports = {
       title: 'DOM',
       children: [
         '/tech/DOM/常见事件与DOM事件模型',
+        '/tech/DOM/DOM事件',
         '/tech/DOM/DOM diff算法',
       ]
-    }
-    ,{
+    },  {
+      title: 'BOM',
+      children: [
+        '/tech/BOM/BOM',
+      ]
+    },
+    {
+      title: 'http',
+      children: [
+        '/tech/http/跨域',
+        '/tech/http/浅析URL',
+      ]
+    },
+    {
       title: 'Node.js',
       children: [
         '/tech/Node.js/Node.js入门',
         '/tech/Node.js/FileSystem',
         '/tech/Node.js/Jest测试',
         '/tech/Node.js/HTTP模块',
-        '/tech/Node.js/commander-translation'
+        '/tech/Node.js/commander-translation',
+        '/tech/Node.js/数据库',
+        '/tech/Node.js/Docker',
+        '/tech/Node.js/commonjs规范',
       ]
     },
     {
-      title: 'Docker',
+      title: '正则表达式',
       children: [
-        '/tech/Node.js/Docker'
+        '/tech/正则表达式/正则表达式',
+      ]
+    },
+    {
+      title: '面试',
+      children: [
+        '/tech/面试/面试押题',
+      ]
+    },
+    {
+      title: 'Mockjs',
+      children: [
+        '/tech/Mockjs/mockjs',
       ]
     },
     {
       title: '算法',
       children: [
         '/tech/算法/排序算法',
+      ]
+    },
+    {
+      title: '设计模式',
+      children: [
+        '/tech/设计模式/设计模式',
+        '/tech/设计模式/MVC'
       ]
     },
     {
