@@ -15,3 +15,9 @@ sidebarDepth: 2
 - alt + 回车 在新标签打开
 - shift + 回车 在新窗口打开
 - ctrl + shift + D 删除历史数据
+
+### 控制台
+
+- Network 查看网络请求状态
+- Preserve log 不会清空当前内容
+- Disable cache 清空缓存

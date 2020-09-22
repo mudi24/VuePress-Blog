@@ -11,14 +11,6 @@ html 和 css 无法区分大小写，js 可以区分字母大小写（驼峰命�
 - 使用 script 标签
 - 严格模式（use strict），文件首行，函数首行
 
----
-
-title: "HTML 常用标签"
-date: 2019-10-23T15:57:32+08:00
-draft: false
-
----
-
 1. a 标签
 
    - href：超链接，网址
