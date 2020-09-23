@@ -11,6 +11,16 @@ html 和 css 无法区分大小写，js 可以区分字母大小写（驼峰命�
 - 使用 script 标签
 - 严格模式（use strict），文件首行，函数首行
 
+## meta 标签
+
+```js
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimun-scale=1.0,maximun-scale=1.0,user-scalable=no">
+```
+
+## 全局属性
+
+- 版权标志 &copy;
+
 1. a 标签
 
    - href：超链接，网址
