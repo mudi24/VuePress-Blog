@@ -17,9 +17,14 @@ html 和 css 无法区分大小写，js 可以区分字母大小写（驼峰命�
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimun-scale=1.0,maximun-scale=1.0,user-scalable=no">
 ```
 
+- 版权标志 &copy;
+
 ## 全局属性
 
-- 版权标志 &copy;
+- class：.header 匹配 class 有 header 的元素， [class = header] 匹配全部
+- contenteditable：使标签可以被编辑，把 style 标签放在 body 中，并将 style 设置为 block，就可以把 style 中的代码显示到页面中
+- hidden：通过添加 css 的 display 可以让其显示出来
+- tabindex：如果为 0，最后被 tab 访问，如果为-1，不被 tab 访问，如果为正数，可以不连续，越小越早被访问
 
 1. a 标签
 
@@ -91,9 +96,18 @@ html 和 css 无法区分大小写，js 可以区分字母大小写（驼峰命�
 
 7. 其他标签
 
-   - textarea 标签 resize: none;（无法修改大小）
+   - textarea 标签 属性：resize: none;（无法修改大小）
    - select 标签（选择框）
    - option 标签（选项）
+   - dl+dt+dd 键值对列表
+   - strong 内容上的强调
+   - em 语气上的强调
+   - hr 分割线
+   - br 换行
+   - pre 空格和换行都会显示
+   - code 展示代码
+   - quote 内联引用
+   - blockquote 块级引用
 
 8. 其他
 

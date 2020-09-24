@@ -117,3 +117,11 @@ sidebarDepth: 2
   - ::selection 匹配被鼠标选中的文字内容
 
 * 伪类表示一个元素的某种状态，伪元素则更像是一个元素。
+
+### 多出来的文本显示为省略号
+
+```css
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+```
