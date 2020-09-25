@@ -51,6 +51,7 @@ module.exports = {
       title: 'CSS',
       children: [
         '/tech/CSS/css选择器',
+        '/tech/CSS/css基础知识',
         '/tech/CSS/响应式布局',
         '/tech/CSS/css动画',
         '/tech/CSS/定位与层叠上下文',
@@ -196,7 +197,13 @@ module.exports = {
       children: [
         '/tech/开源/开源许可证',
       ]
-    }
+    },
+    {
+      title: '常见英文词汇',
+      children: [
+        '/tech/常见英文词汇/前端词汇',
+      ]
+    },
   ]
   }
 }

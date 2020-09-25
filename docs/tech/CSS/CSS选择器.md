@@ -91,7 +91,7 @@ sidebarDepth: 2
   - :checked 选中被勾选的表单元素
   - :disabled 选中被禁用的表单元素
   - :focus 选中被激活的表单元素
-  - :root 选中根节点<html>
+  - :root 选中根节点`<html></html>`
 
 - 伪类
 
