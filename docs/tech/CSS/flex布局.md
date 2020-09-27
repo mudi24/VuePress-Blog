@@ -8,6 +8,7 @@ sidebarDepth: 2
 ## justify-content（主轴对齐方式）
 
 - justify-content: center | start | end | flex-start | flex-end
+- justify-content:space-between => margin-left:auto
 
 ## align-items（次轴对齐方式）
 

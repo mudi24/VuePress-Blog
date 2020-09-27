@@ -3,11 +3,13 @@ title: "grid布局"
 sidebarDepth: 2
 ---
 
+## grid 布局（待完善）
+
 ### grid 布局是一种二维布局模型，先在页面上画好“虚拟格子”，再设置元素在格子上的位置和跨度
 
 #### 容器属性
 
-1. 声明使用 flex 布局
+1. 声明使用 grid 布局
    - display: grid; / inline-grid
 2. 画好虚拟表格
    - grid: 30px auto 30px / 10% 1fr 10% (3 行 3 列)
@@ -19,7 +21,11 @@ sidebarDepth: 2
    - justify-content: space-evenly;
 4. 子项属性
    - grid-column： 3 / span 2; (从第三条线开始，跨越两个格子 => 3 / 5)
+     - grid-column-start （可以设为负值，可以设为比 start 小的值）
+     - grid-column-end
    - grid-row: 3 / 4;
+     - grid-row-start
+     - grid-row-end
    - justify-self: start;
    - align-self: center;
 
@@ -28,7 +34,7 @@ sidebarDepth: 2
 ```
 <body>
   <header>header</header>
-  <div class="subnav>subnav</div>
+  <div class="subnav">subnav</div>
   <main>main</main>
   <aside>aside</aside>
 </body>
