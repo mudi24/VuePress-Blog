@@ -146,6 +146,7 @@ module.exports = {
       children: [
         '/tech/http/跨域',
         '/tech/http/浅析URL',
+        '/tech/http/http基础概念',
       ]
     },
     {

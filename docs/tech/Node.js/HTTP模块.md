@@ -79,3 +79,18 @@ server.on('request', (request, response)=>{
 - 添加缓存选项
 - 响应内容启用 gzip
 - 对比业界优秀案例 http-server/node-static，制作一个静态服务器
+
+## 用 Node.js 读取请求
+
+- 读取请求动词 request.method
+- 读取路径：
+  - request.url 路径，带查询参数
+  - path 纯路径，不带查询参数
+  - query 只有查询参数
+- 读取请求头：request.headers['Accept']
+
+## 用 Node.js 设置响应
+
+- 设置响应状态码：response.statusCode = 200
+- 设置响应头：response.setHeader('Content-Type','text/html')
+- 设置响应体：response.write('内容)，可以用 response.write 追加内容

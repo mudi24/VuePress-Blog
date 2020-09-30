@@ -14,7 +14,7 @@ html 和 css 无法区分大小写，js 可以区分字母大小写（驼峰命�
 ## meta 标签
 
 ```js
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimun-scale=1.0,maximun-scale=1.0,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 ```
 
 - 版权标志 &copy;
