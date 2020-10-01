@@ -66,6 +66,7 @@ module.exports = {
         '/tech/JS/JS基本语法',
         '/tech/JS/数据类型',
         '/tech/JS/JS继承',
+        '/tech/JS/JS原型',
         '/tech/JS/JS对象基本用法',
         '/tech/JS/JS函数的执行时机',
         '/tech/JS/Promise和async、await',
