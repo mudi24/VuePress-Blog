@@ -30,8 +30,7 @@ Object.defineProperty(Function.prototype, "bind", {
 });
 ```
 
-- 接下来我们选择换个思路，创建 bind2
-  来写我们自己的 bind
+- 接下来我们选择换个思路，创建 bind2 来写我们自己的 bind
 
 ```js
 Function.prototype.bind2 = () => {};

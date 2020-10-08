@@ -57,6 +57,7 @@ module.exports = {
         '/tech/CSS/定位与层叠上下文',
         '/tech/CSS/flex布局',
         '/tech/CSS/grid布局',
+        '/tech/CSS/简易Bootstrap',
       ]
     },
     {
