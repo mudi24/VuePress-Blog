@@ -3,7 +3,7 @@ title: "简易Bootstrap"
 sidebarDepth: 2
 ---
 
-- CSS
+## Bootstrap 栅格系统核心 CSS
 
 ```css
 * {
@@ -309,6 +309,8 @@ sidebarDepth: 2
   }
 }
 ```
+
+## Bootstrap 栅格系统使用范例
 
 ```html
 <!DOCTYPE html>

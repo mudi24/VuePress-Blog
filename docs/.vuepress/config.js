@@ -8,6 +8,8 @@ module.exports = {
     logo: '', // 左上角logo
     nav: [  // 导航栏配置
       {text:'技术文档', link: '/tech/'},
+      {text: '公众号', link: ''},
+      {text: '个人简介', link: ''},
       {text: '掘金主页', link: ''},
     ],
     // sidebar: 'auto',  // 侧边栏配置
