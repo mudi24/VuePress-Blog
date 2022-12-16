@@ -1,10 +1,16 @@
+---
+title: "localForage"
+sidebarDepth: 2
+---
+
 ## 前言
 
 localStorage 是前端本地存储的一种方式，容量在 5M ~ 10M，可以用来缓存一些简单的数据
 
 但是如果需要存储大量的本地数据，localStorage 就不够用了。当然，浏览器也提供了存储大量本地数据的解决方案，如：[IndexedDB](https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API)。
 
-![IndexedDB](./IndexedDB.jpg)
+![IndexedDB](../../.vuepress/public/browser/IndexedDB.jpg)
+
 
 查看了 MDN 文档，IndexedDB 的功能十分强大， 但直接使用太复杂。所以我们去用一下 MDN 推荐的库：localForage 和 idb-keyval 。
 
@@ -72,7 +78,8 @@ localforage.getItem('somekey', function(err, value) {
 });
 ```
 > 当存储 undefined 时， getItem() 也会返回 null。[由于 localStorage 限制](https://github.com/localForage/localForage/pull/42)，同时出于兼容性的原因 localForage 无法存储 undefined。
-![这里的 asyncStorage 指的是 localForage，主要看表格就可以了。](./setItem.jpg)
+![这里的 asyncStorage 指的是 localForage，主要看表格就可以了。](../../.vuepress/public/browser/setItem.jpg)
+
 * localForage 存储 undefined，会返回 null
 * localStorage 存储 undefined，会报错 ERROR : JSON.parse("undefined")
 * WebSQL 存储 undefined，会返回 "undefined" （字符串形式的 undefined)
@@ -262,11 +269,13 @@ localforage.setDriver([localforage.WEBSQL, localforage.INDEXEDDB]);
 
 * version
 
-[!中文版本](version_cn.jpg)
+[!中文版本](../../.vuepress/public/browser/version_cn.jpg)
+
 
 因为我英文水平一般，所以看得是中文文档，中文介绍是上面这样的，我看不懂`目前未使用`是什么意思，于是我特地去查看了英文文档。
   
-[!英文版本](version_en.jpg)
+[!英文版本](../../.vuepress/public/browser/version_en.jpg)
+
 
 我去翻译软件翻译了一下，结果放在了下面：
 ```
