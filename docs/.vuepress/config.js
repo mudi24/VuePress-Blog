@@ -37,6 +37,16 @@ module.exports = {
         ],
       },
       {
+        title: "前端性能优化",
+        children: [
+          "/tech/前端性能优化/前言",
+          "/tech/前端性能优化/webpack 性能调优与Gzip原理",
+          "/tech/前端性能优化/图片优化",
+          "/tech/前端性能优化/浏览器缓存机制",
+          "/tech/前端性能优化/本地存储",
+        ],
+      },
+      {
         title: "阅读源码",
         children: [
           "/tech/阅读源码/为什么 Vue2 this 能够直接获取到 data 和 methods中的变量和方法？",
@@ -68,6 +78,7 @@ module.exports = {
           "/tech/CSS/flex布局",
           "/tech/CSS/grid布局",
           "/tech/CSS/简易Bootstrap",
+          "/tech/CSS/移动端屏幕适配方案",
         ],
       },
       {
