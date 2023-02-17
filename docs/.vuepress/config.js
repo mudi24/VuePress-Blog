@@ -119,6 +119,7 @@ module.exports = {
           "/tech/Vue/computed和watch",
           "/tech/Vue/TS结合Vue",
           "/tech/Vue/Vue 3 和 Vue 2 的差别",
+          "/tech/Vue/Vue.js 运行机制（概览）",
         ],
       },
       {
