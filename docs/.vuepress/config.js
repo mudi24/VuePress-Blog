@@ -118,6 +118,7 @@ module.exports = {
           "/tech/Vue/mixin",
           "/tech/Vue/computed和watch",
           "/tech/Vue/TS结合Vue",
+          "/tech/Vue/Vue 3 和 Vue 2 的差别",
         ],
       },
       {
@@ -188,7 +189,7 @@ module.exports = {
       },
       {
         title: "面试",
-        children: ["/tech/面试/面试押题"],
+        children: ["/tech/面试/面试押题", "/tech/面试/前端面试题"],
       },
       {
         title: "Mockjs",
