@@ -39,7 +39,8 @@ sidebarDepth: 2
 - JS 代码就可以直接 require 这个.node 文件
 - 这样 JS 就可以直接调用 C++库，中间的桥梁就是 binding
 - Node.js 提供了很多 binding，所以加个 s
-  注意：编译成.node 文件不是必须的，可以是其他的任何可行方式
+
+> 注意：编译成.node 文件不是必须的，可以是其他的任何可行方式
 
 #### libuv
 
