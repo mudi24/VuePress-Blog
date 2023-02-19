@@ -123,6 +123,11 @@ module.exports = {
           "/tech/Vue/Vue.js 运行机制（响应式系统的基本原理）",
           "/tech/Vue/Vue.js 运行机制（响应式系统的依赖收集）",
           "/tech/Vue/Vue.js 运行机制（虚拟DOM的VNode节点）",
+          "/tech/Vue/Vue.js 运行机制（template模板是如何进行编译的）",
+          "/tech/Vue/Vue.js 运行机制（异步更新策略及nextTick原理）",
+          "/tech/Vue/Vue.js 运行机制（diff算法与patch机制）",
+          "/tech/Vue/Vue.js 运行机制（Vuex状态管理的工作原理）",
+          "/tech/Vue/Vue.js 运行机制（总结&常见问题解答）",
         ],
       },
       {
