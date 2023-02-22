@@ -27,3 +27,7 @@ JavaScript
 
 ### TS 中的数据类型
 
+
+### .d.ts 文件的作用
+
+类型定义文件 d.ts(TypeScript Declaration File)
