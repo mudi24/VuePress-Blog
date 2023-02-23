@@ -3,125 +3,50 @@ title: "Node.js 入门"
 sidebarDepth: 2
 ---
 
-## Node.js 双数是稳定版，单数非稳定版，使用 8 及以上的版本
+## Node.js 和浏览器
 
-## 安装
+Node.js 和浏览器不同，浏览器提供了 DOM API，比如 Window 对象、Location 对象、Document 对象、HTMLElement 对象、Cookie 对象等等。
+而 Node.js 提供了自己特有的 API，比如全局的 global 对象，也提供了当前进程信息的 Process 对象，操作文件的 fs 模块，以及创建 Web 服务的 http 模块等等。这些 API 能够让我们使用 JavaScript 操作计算机，所以我们可以用 Node.js 平台开发 web 服务器。
 
-- Windows 官网下载安装包（不要绿色版），默认配置就可以，不方便安装子系统
-- Mac 安装 homebrew ，`brew install node@10`，需要多版本可以使用 n 或 nvm 两种工具
+还有一些 JS 引擎提供的内置对象，在 Node.js 和浏览器环境下都可以使用。比如下面这些：
 
-## 周边工具
+- 基本的常量 undefined、null、NaN、Infinity；
+- 内置对象 Boolean、Number、String、Object、Symbol、Function、Array、Regexp、Set、Map、Promise、Proxy；
+- 全局函数 eval、encodeURIComponent、decodeURIComponent 等等。
 
-- nrm 用于切换下载源
-- ts-node 可以运行 ts 的 node
-- Windows NotePad++ 临时打开文件，cmder 可以代替 git bash
-- Mac iTerm2.app on my zsh
+还有一部分 API 不属于 JS 引擎内置，但是在 Node.js 和浏览器中都可以使用，比如 setTimeout、setInterval 方法，Console 对象等等。
 
-## Node.js 使 JS 可以调用系统接口，开发后端应用
+## Node.js 的基本架构
 
-## Node.js 用到的技术
+![](https://p.ssl.qhimg.com/t01bdaf1234dcdbef5c.jpg)
 
-- V8 引擎
-- libuv
-- C/C++实现的 c-ares（域名解析）、http-parser（http 解析）、OpenSSL（https）、zlib（加密）等库
+上图是 Node.js 的基本架构，我们可以看到，Node.js 是运行在操作系统之上的，它底层由 V8 JavaScript 引擎，以及一些 C/C++ 写的库构成，包括 libUV 库、c-ares、llhttp/http-parser、open-ssl、zlib 等等。
 
-## Node.js 技术架构
+其中，libUV 负责处理事件循环，c-ares、llhttp/http-parser、open-ssl、zlib 等库提供 DNS 解析、HTTP 协议、HTTPS 和文件压缩等功能。
 
-<!-- ![Node.js架构](../../.vuepress/public/Node.js架构.jpg) -->
+在这些模块的上一层是中间层，中间层包括 Node.js Bindings、Node.js Standard Library 以及 C/C++ AddOns。Node.js Bindings 层的作用是将底层那些用 C/C++ 写的库接口暴露给 JS 环境，而 Node.js Standard Library 是 Node.js 本身的核心模块。至于 C/C++ AddOns，它可以让用户自己的 C/C++ 模块通过桥接的方式提供给 Node.js。
 
-如果要看源代码，推荐看 0.10 版本（使用时间久，代码相对较少）
-了解更多，请查看[node](https://github.com/yjhjstz/deep-into-node)
+中间层之上就是 Node.js 的 API 层了，我们使用 Node.js 开发应用，主要是使用 Node.js 的 API 层，所以 Node.js 的应用最终就运行在 Node.js 的 API 层之上。
 
-### bindings
+## Node.js 可以做什么
 
-- Node.js 用 C++对 http_parser 进行封装，使它符合某些要求，封装的文件叫做 http_parser_bindings.cpp
-- 用 Node.js 提供的编译将其编译为.node 文件
-- JS 代码就可以直接 require 这个.node 文件
-- 这样 JS 就可以直接调用 C++库，中间的桥梁就是 binding
-- Node.js 提供了很多 binding，所以加个 s
+Node.js 是运行在操作系统中的 JavaScript 运行时环境，提供了一系列操作系统的 API，通过它们我们可以执行操作系统指令、读写文件、建立网络连接、调用操作系统中的其他服务等等。
 
-> 注意：编译成.node 文件不是必须的，可以是其他的任何可行方式
+Node.js 内置的模块比较丰富，常用的主要是以下几个。
 
-#### libuv
+- File System 模块：这是操作系统的目录和文件的模块，提供文件和目录的读、写、创建、删除、权限设置等等。
+- Net 模块：提供网络套接字 socket，用来创建 TCP 连接，TCP 连接可以用来访问后台数据库和其他持久化服务。
+- HTTP 模块：提供创建 HTTP 连接的能力，可以用来创建 Web 服务，也是 Node.js 在前端最常用的核心模块。
+- URL 模块：用来处理客户端请求的 URL 信息的辅助模块，可以解析 URL 字符串。
+- Path 模块：用来处理文件路径信息的辅助模块，可以解析文件路径的字符串。
+- Process 模块：用来获取进程信息。
+- Buffer 模块：用来处理二进制数据。
+- Console 模块：控制台模块，同浏览器的 Console 模块，用来输出信息到控制台。
+- Crypto 加密解密模块：用来处理需要用户授权的服务。
+- Events 模块：用来监听和派发用户事件。
 
-跨平台的异步 I/O 库
+有兴趣的朋友可以查看[Node.js 官方文档](https://nodejs.org/dist/latest-v18.x/docs/api/)
 
-输入，输出都属于 I/O 操作，系统与外界的交互行为
+## Node.js 的模板管理
 
-> 功能：用于 TCP/UDP/DNS/文件等的异步操作
-
-http 是基于 TCP ，
-UDP 聊天常用，不需要三次握手，效率高
-
-### V8
-
-功能：
-
-- 将 JS 源代码变成本地代码
-- 维护调用栈，确保 JS 函数的执行顺序
-- 内存管理，为所有对象分配内存
-- 垃圾回收，重复利用无用的内存
-- 实现 JS 的标准库（数组 splice）
-
-注意：
-
-- V8 不提供 DOM API
-- V8 执行 JS 是单线程的
-- 可以开启两个线程分别执行 JS
-- V8 本身包含多个线程
-- 自带 event loop， 但 Node.js 基于 libuv 自己做了一个 event loop
-
-#### Event Loop
-
-event 事件
-loop 循环，Node.js 按顺序轮询每种事件
-
-事件同时触发，Node 规定了某种顺序
-
-- 操作系统可以触发事件，JS 可以处理事件
-- Event Loop 就是对事件处理顺序的管理
-
-方方翻译的 event loop 文档：https://juejin.im/post/5ab7677f6fb9a028d56711d0
-
-![EventLoop顺序](../../.vuepress/public/EventLoop.jpg)
-
-重点阶段
-
-- timers 检查计时器
-- poll 轮询，检查系统事件
-- check 检查 setImmediate 回调
-- 其他阶段用得较少
-
-注意：
-
-- 大部分时间，Node.js 都会停在 poll 轮询阶段
-- 大部分事件都在 poll 阶段被处理，如文件，网络请求
-
-### 总结
-
-- 使用 libuv 进行异步 I/O 操作
-- 使用 eventLoop 管理时间处理顺序
-- 用 C/C++ 库处理 TCP/UDP/DNS/文件
-- 使用 bindings 使 JS 可以和 C++互相调用
-- 使用 V8 来运行 JS
-- 使用 Node.js 标准库简化 JS 代码
-
-## Node.js API
-
-民间版本：https://devdocs.io/
-
-- Buffer 小段缓存
-- Child Processes 子进程
-- Cluster
-- Debugger
-- Events
-- File System
-- Globals 全局变量
-- HTTP
-- Path
-- Process
-- Query Strings 对 url 进行处理
-- Stream 流格式的数据处理
-- Timers
-- URL
-- Worker Threads（node10 才有）
+所谓模块化，就是指代码具有模块结构，整个应用可以自顶向下划分为若干个模块，每个模块彼此独立，代码不会相互影响。模块化的目的是使代码可以更好地复用，从而支持更大规模的应用开发。
