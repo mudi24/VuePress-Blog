@@ -191,6 +191,7 @@ module.exports = {
           "/tech/Node.js/Docker",
           "/tech/Node.js/commonjs规范",
           "/tech/Node.js/CommonJS和ES Modules",
+          "/tech/Node.js/包管理工具NPM",
         ],
       },
       {
