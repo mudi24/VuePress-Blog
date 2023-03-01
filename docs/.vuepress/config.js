@@ -34,6 +34,7 @@ module.exports = {
           "/tech/浏览器/浏览器渲染原理",
           "/tech/浏览器/chrome快捷键",
           "/tech/浏览器/localForage",
+          "/tech/浏览器/浏览器窗口传递数据",
         ],
       },
       {
