@@ -54,8 +54,8 @@
     <div
       v-if="data.footer"
       class="footer"
+      v-html="data.footer"
     >
-      {{ data.footer }}
     </div>
   </main>
 </template>
@@ -128,7 +128,7 @@ export default {
     justify-content space-between
   .feature
     flex-grow 1
-    flex-basis 30%
+    flex-basis 25%
     max-width 30%
     h2
       font-size 1.4rem
