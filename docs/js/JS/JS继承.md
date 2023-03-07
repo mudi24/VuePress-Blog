@@ -88,7 +88,7 @@ Human.prototype.constructor = Human;
 1. 构造函数 + 原型
 
    - 不写 Parent.call(this, name1)
-     ![注释Parent.call(this, name1)](/images/nocall.png)
+     ![注释Parent.call(this, name1)](http://rq9s5lc0q.hb-bkt.clouddn.com/blog/js/class-error.jpg?e=1678185467&token=T2pLxEmUwd9-tHhgpCQLKzpsG4xUBY7QSVH24GdD:uM0WfJUIqBuo50grY-qRZGC-cyY=)
      注释掉 Parent.call(this, name1)之后，执行 pMethod 函数，pMethod 函数被 child 调用，this 指向 child，但在 child 中无法找到 name1，所以输出 undefined。
 
    - 正确代码
@@ -145,7 +145,7 @@ Human.prototype.constructor = Human;
    ```
 
    - 构造函数中使用的 super() 只能在构造函数中使用，并且必须在使用 this 关键字前调用。不调用的话执行函数会报错。
-     ![](/images/class-error.jpg)
+     ![](http://rq9s5lc0q.hb-bkt.clouddn.com/blog/js/class-error.jpg?e=1678185467&token=T2pLxEmUwd9-tHhgpCQLKzpsG4xUBY7QSVH24GdD:uM0WfJUIqBuo50grY-qRZGC-cyY=)
 
 3. Mixin(混入)
 

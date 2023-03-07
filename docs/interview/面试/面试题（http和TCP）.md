@@ -3,9 +3,9 @@ title: "面试题（http和TCP）"
 sidebarDepth: 2
 ---
 
-### http
+# http
 
-#### http 状态码
+## http 状态码
 
 状态码的类别：
 
@@ -15,7 +15,7 @@ sidebarDepth: 2
 4xx Client Error (客户端错误状态码) 服务器无法处理请求
 5xx Server Error(服务器错误状态码) 服务器处理请求出错
 
-#### Http 和 Https 区别
+## Http 和 Https 区别
 
 - HTTP 的 URL 以 http:// 开头，而 HTTPS 的 URL 以 https:// 开头
 - HTTP 是不安全的，而 HTTPS 是安全的
@@ -24,7 +24,7 @@ sidebarDepth: 2
 - HTTP 无法加密，而 HTTPS 对传输的数据进行加密
 - HTTP 无需证书，而 HTTPS 需要 CA 机构 wosign 的颁发的 SSL 证书
 
-#### GET 和 POST 的区别
+## GET 和 POST 的区别
 
 从 http 协议的角度来说，GET 和 POST 它们都只是请求行中的第一个单词，除了语义不同，其实没有本质的区别。  
 之所以在实际开发中会产生各种区别，主要是因为浏览器的默认行为造成的。  
@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 刷新页面时，若当前的页面是通过 POST 请求得到的，则浏览器会提示用户是否重新提交。若是 GET 请求得到的页面则没有提示。
 - GET 请求的地址可以被保存为浏览器书签，POST 不可以
 
-#### TCP 三次握手和四次挥手
+## TCP 三次握手和四次挥手
 
 - TCP 协议通过三次握手建立可靠的点对点连接
   首先服务器进入监听状态，然后即可处理连接

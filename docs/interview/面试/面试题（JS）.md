@@ -208,7 +208,7 @@ function unique2(arr) {
 
 ## 继承
 
-#### 不用 class 继承
+### 不用 class 继承
 
 ```js
 function Animal(color) {
@@ -228,7 +228,7 @@ Dog.prototype.say = function say() {};
 var dog = new Dog();
 ```
 
-#### class 继承
+### class 继承
 
 ```js
 class Animal(){
@@ -246,14 +246,14 @@ class Dog extends Animal {
 }
 ```
 
-### 深拷贝和浅拷贝
+## 深拷贝和浅拷贝
 
 - 浅拷贝：只是拷贝了基本类型的数据，而引用类型数据，复制后也是会发生引用，我们把这种拷贝叫做浅拷贝（浅复制）
   浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。
 
 - 深拷贝：在堆中重新分配内存，并且把源对象所有属性都进行新建拷贝，以保证深拷贝的对象的引用图不包含任何原有对象或对象图上的任何对象，拷贝后的对象与原来的对象是完全隔离，互不影响。
 
-#### Object.assign
+### Object.assign
 
 Object.assign 可以进行浅拷贝，该方法的第一个参数是拷贝的目标对象，后面的参数是拷贝的来源对象（也可以是多个来源）。但需要注意一下三点：
 
@@ -261,7 +261,7 @@ Object.assign 可以进行浅拷贝，该方法的第一个参数是拷贝的目
 - 它不会拷贝对象的不可枚举的属性；
 - 可以拷贝 Symbol 类型的属性。
 
-#### 深拷贝
+### 深拷贝
 
 #### 方法一，用 JSON：
 
@@ -405,7 +405,7 @@ const deepClone = (a, cache) => {
 };
 ```
 
-### 手写 promise
+## 手写 promise
 
 ```js
 new Promise((resolve, reject) => {});
@@ -436,6 +436,58 @@ class Promise2 {
     this.queue1.push(success);
     this.queue2.push(fail);
     return this;
+  }
+}
+```
+
+## 轮播图的实现原理
+
+纯 CSS 实现轮播图：[](https://juejin.cn/post/6937893309234823175)
+
+## 判断数组嵌套了几层
+
+> 有一种情况是同一层有两个或多个数组的情况，如`[1,[2,3],[4,5,[6]]]`，这种情况还需要加更复杂的逻辑判断
+
+```js
+function getArrDepth(arr) {
+  let count = 0;
+  let res = [];
+
+  const help = function (arr, dep) {
+    for (let val of arr) {
+      if (val instanceof Array) {
+        help(val, dep + 1);
+      } else {
+        res.push(val);
+        count = Math.max(count, dep);
+      }
+    }
+  };
+
+  help(arr, 1);
+  return count;
+}
+
+var abc = [1, 3, 3, [4, 6, 7, [5, 6, 7, 43, [23, 4]]]];
+console.log(getArrDepth(abc));
+```
+
+下面这种方法也可以
+
+```js
+function recursiveMax(input) {
+  var flag = false;
+  var num = [];
+  for (var i = 0; i < input.length; i++) {
+    if (input[i] instanceof Array) {
+      flag = true;
+      num.push(recursiveMax(input[i]));
+    }
+  }
+  if (flag) {
+    return Math.max.apply(null, num) + 1;
+  } else {
+    return 1;
   }
 }
 ```

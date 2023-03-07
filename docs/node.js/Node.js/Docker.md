@@ -79,7 +79,7 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -d mysql:5.7.
 
 - 错误信息：Docker Desktop requires Windows 10 Pro/Enterprise (15063+) or Windows 10 Home (19018+).
 
-![安装Docker失败](../../.vuepress/public/Install-Docker-Failed.jpg)
+<!-- ![安装Docker失败](../../.vuepress/public/Install-Docker-Failed.jpg) -->
 
 - 错误原因：Docker Desktop 使用需要 Windows 10 Pro 或 Enterprise，而我使用的 windows 10 家庭版，至少需要专业版才可以直接支持 Docker Desktop
 - 解决方案：https://www.sitepoint.com/docker-windows-10-home/
